@@ -6,14 +6,14 @@
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/27 10:23:46 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/27 11:20:06 by juhur            ###   ########.fr       */
+/*   Updated: 2021/04/27 12:32:52 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** #include <ctype.h>
-**
 ** isalpha -- alphabetic character test
+**
+** #include <ctype.h>
 **
 ** The value of the argument must be representable
 ** as an "unsigned char" or the value of EOF.

@@ -6,16 +6,16 @@
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/25 00:52:30 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/26 23:12:57 by juhur            ###   ########.fr       */
+/*   Updated: 2021/04/27 12:33:19 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
 /*
-** #include <string.h>
-**
 ** memset -- fill a byte string with a byte value
+**
+** #include <string.h>
 **
 ** The memset() function writes len bytes of value c
 ** (converted to an unsigned char) to the string b.

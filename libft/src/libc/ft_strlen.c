@@ -6,16 +6,16 @@
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/25 00:46:00 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/26 23:12:27 by juhur            ###   ########.fr       */
+/*   Updated: 2021/04/27 12:33:30 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
 /*
-** #include <string.h>
-**
 ** strlen -- find length of string
+**
+** #include <string.h>
 **
 ** Computes the length of the string s.
 **

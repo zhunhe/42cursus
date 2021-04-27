@@ -6,14 +6,14 @@
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/27 11:21:19 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/27 11:24:21 by juhur            ###   ########.fr       */
+/*   Updated: 2021/04/27 12:33:02 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** #include <ctype.h>
-**
 ** isascii -- test for ASCII character
+**
+** #include <ctype.h>
 **
 ** Tests for an ASCII character,
 ** which is any character between 0 and octal 0177 inclusive.

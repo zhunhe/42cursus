@@ -6,19 +6,18 @@
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/27 10:17:27 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/27 11:19:46 by juhur            ###   ########.fr       */
+/*   Updated: 2021/04/27 12:32:24 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
 /*
-** #include <string.h>
-**
 ** bzero -- write zeroes to a byte string
 **
-** writes n zeroed bytes to the string s
-** If n is zero, bzero() does nothing.
+** #include <string.h>
+**
+** writes n zeroed bytes to the string s. If n is zero, bzero() does nothing.
 **
 ** <PARAMETERS>
 ** void *s: Destination

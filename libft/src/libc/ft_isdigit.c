@@ -6,14 +6,14 @@
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/27 10:50:17 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/27 11:19:56 by juhur            ###   ########.fr       */
+/*   Updated: 2021/04/27 12:33:10 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** #include <ctype.h>
-**
 ** isdigit -- decimal-digit character test
+**
+** #include <ctype.h>
 **
 ** Tests for a decimal digit character.
 ** Regardless of locale, this includes the following characters only:
