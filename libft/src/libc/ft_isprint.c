@@ -6,21 +6,14 @@
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/27 12:36:59 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/27 17:37:39 by juhur            ###   ########.fr       */
+/*   Updated: 2021/04/27 17:59:06 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
 /*
-** isprint -- printing character test (space character inclusive)
-**
-** #include <ctype.h>
-**
-** The value of the argument must be representable
-** as an "unsigned char" or the value of EOF.
-** In the ASCII character set, this includes the following characters
-** (preceded by their numeric values, in octal):
+** isprint -- printing character test (ctype.h)
 **
 **   040 sp        041 ``!''     042 ``"''     043 ``#''     044 ``$''
 **   045 ``%''     046 ``&''     047 ``'''     050 ``(''     051 ``)''
@@ -41,13 +34,6 @@
 **   160 ``p''     161 ``q''     162 ``r''     163 ``s''     164 ``t''
 **   165 ``u''     166 ``v''     167 ``w''     170 ``x''     171 ``y''
 **   172 ``z''     173 ``{''     174 ``|''     175 ``}''     176 ``~''
-**
-** <PARAMETER>
-** int c: Source
-**
-** <RETURN VALUES>
-** true: If 1st argument is printable character.
-** false: If 1st argument is not printable character.
 */
 
 int	ft_isprint(int c)
