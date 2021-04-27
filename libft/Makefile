@@ -6,7 +6,7 @@
 #    By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/25 01:09:30 by juhur             #+#    #+#              #
-#    Updated: 2021/04/27 12:26:26 by juhur            ###   ########.fr        #
+#    Updated: 2021/04/27 12:54:03 by juhur            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,7 @@ SRC =				\
 	src/libc/ft_isdigit.c	\
 	src/libc/ft_isalpha.c	\
 	src/libc/ft_isalnum.c	\
+	src/libc/ft_isprint.c
 
 # Object files
 OBJ = $(SRC:.c=.o)

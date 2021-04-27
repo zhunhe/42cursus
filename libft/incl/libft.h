@@ -6,7 +6,7 @@
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/25 00:46:25 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/27 11:43:49 by juhur            ###   ########.fr       */
+/*   Updated: 2021/04/27 12:53:43 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,5 @@ int					ft_isalpha(int c);
 int					ft_isdigit(int c);
 int					ft_isascii(int c);
 int					ft_isalnum(int c);
+int					ft_isprint(int c);
 #endif
