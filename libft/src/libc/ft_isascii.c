@@ -6,7 +6,7 @@
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/27 11:21:19 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/27 12:33:02 by juhur            ###   ########.fr       */
+/*   Updated: 2021/04/27 12:56:50 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 **
 ** <PARAMETER>
 ** int c: Source
-** 
+**
 ** <RETURN VALUES>
 ** true: If 1st argument is ascii character.
 ** false: If 1st argument is not ascii character.

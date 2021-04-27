@@ -6,7 +6,7 @@
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/27 10:23:46 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/27 12:32:52 by juhur            ###   ########.fr       */
+/*   Updated: 2021/04/27 12:56:41 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@
 **        ...
 ** 'Y': 89  'y': 121
 ** 'Z': 90  'z': 122
-** 
+**
 ** <PARAMETER>
 ** int c: Source
-** 
+**
 ** <RETURN VALUES>
 ** true: If 1st argument is alphabet character.
 ** false: If 1st argument is not alphabet character.
