@@ -6,7 +6,7 @@
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/25 00:46:25 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/27 12:53:43 by juhur            ###   ########.fr       */
+/*   Updated: 2021/04/27 17:23:17 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,11 @@ void				ft_bzero(void *s, size_t n);
 ** #include <ctype.h>
 */
 int					ft_isalpha(int c);
+int					ft_isupper(int c);
+int					ft_islower(int c);
 int					ft_isdigit(int c);
 int					ft_isascii(int c);
 int					ft_isalnum(int c);
 int					ft_isprint(int c);
+int					ft_toupper(int c);
 #endif
