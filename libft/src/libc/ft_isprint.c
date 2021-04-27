@@ -6,7 +6,7 @@
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/27 12:36:59 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/27 12:57:11 by juhur            ###   ########.fr       */
+/*   Updated: 2021/04/27 17:37:39 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,5 @@
 
 int	ft_isprint(int c)
 {
-	unsigned char uc;
-
-	uc = (unsigned char)c;
-	return (32 <= uc && uc <= 126);
+	return (32 <= c && c <= 126);
 }
