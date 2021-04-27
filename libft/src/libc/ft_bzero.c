@@ -1,38 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/25 00:46:25 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/27 11:43:49 by juhur            ###   ########.fr       */
+/*   Created: 2021/04/27 10:17:27 by juhur             #+#    #+#             */
+/*   Updated: 2021/04/27 11:19:46 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-
-# include <stddef.h>
-
-typedef struct		s_list
-{
-	void			*content;
-	size_t			content_size;
-	struct s_list	*next;
-}					t_list;
+#include <libft.h>
 
 /*
 ** #include <string.h>
+**
+** bzero -- write zeroes to a byte string
+**
+** writes n zeroed bytes to the string s
+** If n is zero, bzero() does nothing.
+**
+** <PARAMETERS>
+** void *s: Destination
+** size_t n: Length
 */
-void				*ft_memset(void *b, int c, size_t len);
-size_t				ft_strlen(char *s);
-void				ft_bzero(void *s, size_t n);
-/*
-** #include <ctype.h>
-*/
-int					ft_isalpha(int c);
-int					ft_isdigit(int c);
-int					ft_isascii(int c);
-int					ft_isalnum(int c);
-#endif
+
+void	ft_bzero(void *s, size_t n)
+{
+	size_t idx;
+
+	idx = 0;
+	while (idx < n)
+		s[idx++] = 0;
+}

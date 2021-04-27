@@ -6,7 +6,7 @@
 #    By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/25 01:09:30 by juhur             #+#    #+#              #
-#    Updated: 2021/04/26 22:58:57 by juhur            ###   ########.fr        #
+#    Updated: 2021/04/27 12:26:26 by juhur            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,12 @@ CFLAGS = -Wall -Wextra -Werror -I./incl
 # Source files
 SRC =				\
 	src/libc/ft_strlen.c	\
-	src/libc/ft_memset.c
+	src/libc/ft_memset.c	\
+	src/libc/ft_bzero.c	\
+	src/libc/ft_isascii.c	\
+	src/libc/ft_isdigit.c	\
+	src/libc/ft_isalpha.c	\
+	src/libc/ft_isalnum.c	\
 
 # Object files
 OBJ = $(SRC:.c=.o)
