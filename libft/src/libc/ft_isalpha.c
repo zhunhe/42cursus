@@ -6,9 +6,11 @@
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/27 10:23:46 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/27 12:56:41 by juhur            ###   ########.fr       */
+/*   Updated: 2021/04/27 17:22:43 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <libft.h>
 
 /*
 ** isalpha -- alphabetic character test
@@ -36,8 +38,15 @@
 
 int	ft_isalpha(int c)
 {
-	unsigned char uc;
+	return (ft_isupper(c) || ft_islower(c));
+}
 
-	uc = (unsigned char)c;
-	return (('A' <= uc && uc <= 'Z') || ('a' <= uc && uc <= 'z'));
+int	ft_isupper(int c)
+{
+	return ('A' <= c && c <= 'Z');
+}
+
+int	ft_islower(int c)
+{
+	return ('a' <= c && c <= 'z');
 }

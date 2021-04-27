@@ -6,7 +6,7 @@
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/27 10:50:17 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/27 12:57:01 by juhur            ###   ########.fr       */
+/*   Updated: 2021/04/27 17:29:17 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,5 @@
 
 int	ft_isdigit(int c)
 {
-	unsigned char uc;
-
-	uc = (unsigned char)c;
-	return ('0' <= uc && uc <= '9');
+	return ('0' <= c && c <= '9');
 }
