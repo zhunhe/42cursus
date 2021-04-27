@@ -6,7 +6,7 @@
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/27 12:13:02 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/27 12:16:46 by juhur            ###   ########.fr       */
+/*   Updated: 2021/04/27 12:46:37 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 ** as an "unsigned char" or the value of EOF.
 **
 ** In the ASCII character set, this includes the following characters
-** (preceded by their numeric values, in octal):
 **
 ** '0': 48  'A': 65  'a': 97
 ** '1': 49  'B': 66  'b': 98
