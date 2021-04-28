@@ -6,7 +6,7 @@
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/27 10:17:27 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/28 11:55:06 by juhur            ###   ########.fr       */
+/*   Updated: 2021/04/28 12:55:36 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,5 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t	idx;
-
-	idx = 0;
-	while (idx < n)
-		*(char *)(s + idx++) = (char)0;
+	ft_memset(s, 0, n);
 }
