@@ -1,32 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/25 00:52:30 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/27 17:53:14 by juhur            ###   ########.fr       */
+/*   Created: 2021/04/27 12:13:02 by juhur             #+#    #+#             */
+/*   Updated: 2021/04/28 11:55:36 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 /*
-** memset -- fill a byte string with a byte value (string.h)
-**
-** The memset() function writes len bytes of value c
-** (converted to an unsigned char) to the string b.
+** isalnum -- alphanumeric character test (ctype.h)
 */
 
-void	*ft_memset(void *b, int c, size_t len)
+int	ft_isalnum(int c)
 {
-	void	*p;
-	size_t	idx;
-
-	p = b;
-	idx = 0;
-	while (idx < len)
-		*(unsigned char *)(p + idx++) = (unsigned char)c;
-	return (b);
+	return (ft_isalpha(c) || ft_isdigit(c));
 }

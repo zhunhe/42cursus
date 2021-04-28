@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/27 13:07:38 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/27 18:00:47 by juhur            ###   ########.fr       */
+/*   Created: 2021/04/25 00:52:30 by juhur             #+#    #+#             */
+/*   Updated: 2021/04/28 11:56:33 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 /*
-** toupper -- lower case to upper case letter conversion (ctype.h)
+** memset -- fill a byte string with a byte value (string.h)
+**
+** The memset() function writes len bytes of value c
+** (converted to an unsigned char) to the string b.
 */
 
-int	ft_toupper(int c)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	if (ft_islower(c))
-		c -= ('a' - 'A');
-	return (c);
+	void	*p;
+	size_t	idx;
+
+	p = b;
+	idx = 0;
+	while (idx < len)
+		*(unsigned char *)(p + idx++) = (unsigned char)c;
+	return (b);
 }

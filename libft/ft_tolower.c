@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/25 00:46:00 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/27 18:01:07 by juhur            ###   ########.fr       */
+/*   Created: 2021/04/27 17:16:13 by juhur             #+#    #+#             */
+/*   Updated: 2021/04/28 11:56:43 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 /*
-** strlen -- find length of string (string.h)
+** tolower -- upper case to lower case letter conversion (ctype.h)
 */
 
-size_t	ft_strlen(char *s)
+int	ft_tolower(int c)
 {
-	size_t len;
-
-	len = 0;
-	while (*(s++))
-		++len;
-	return (len);
+	if (ft_isupper(c))
+		c -= ('A' - 'a');
+	return (c);
 }

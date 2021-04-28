@@ -6,11 +6,11 @@
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/27 11:21:19 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/27 18:02:20 by juhur            ###   ########.fr       */
+/*   Updated: 2021/04/28 11:56:03 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 /*
 ** isascii -- test for ASCII character (ctype.h)

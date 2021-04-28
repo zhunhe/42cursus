@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/27 17:16:13 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/27 18:00:36 by juhur            ###   ########.fr       */
+/*   Created: 2021/04/27 10:50:17 by juhur             #+#    #+#             */
+/*   Updated: 2021/04/28 11:56:11 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 /*
-** tolower -- upper case to lower case letter conversion (ctype.h)
+** isdigit -- decimal-digit character test (ctype.h)
 */
 
-int	ft_tolower(int c)
+int	ft_isdigit(int c)
 {
-	if (ft_isupper(c))
-		c -= ('A' - 'a');
-	return (c);
+	return ('0' <= c && c <= '9');
 }

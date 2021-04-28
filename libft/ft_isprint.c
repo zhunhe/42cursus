@@ -6,11 +6,11 @@
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/27 12:36:59 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/27 17:59:06 by juhur            ###   ########.fr       */
+/*   Updated: 2021/04/28 11:56:19 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 /*
 ** isprint -- printing character test (ctype.h)

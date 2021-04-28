@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/27 12:13:02 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/27 17:56:46 by juhur            ###   ########.fr       */
+/*   Created: 2021/04/27 10:17:27 by juhur             #+#    #+#             */
+/*   Updated: 2021/04/28 11:55:06 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 /*
-** isalnum -- alphanumeric character test (ctype.h)
+** bzero -- write zeroes to a byte string (string.h)
 */
 
-int	ft_isalnum(int c)
+void	ft_bzero(void *s, size_t n)
 {
-	return (ft_isalpha(c) || ft_isdigit(c));
+	size_t	idx;
+
+	idx = 0;
+	while (idx < n)
+		*(char *)(s + idx++) = (char)0;
 }

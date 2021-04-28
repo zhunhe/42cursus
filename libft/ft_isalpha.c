@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/27 10:17:27 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/27 17:55:26 by juhur            ###   ########.fr       */
+/*   Created: 2021/04/27 10:23:46 by juhur             #+#    #+#             */
+/*   Updated: 2021/04/28 11:55:57 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 /*
-** bzero -- write zeroes to a byte string (string.h)
+** isalpha -- alphabetic character test (ctype.h)
 */
 
-void	ft_bzero(void *s, size_t n)
+int	ft_isalpha(int c)
 {
-	size_t	idx;
+	return (ft_isupper(c) || ft_islower(c));
+}
 
-	idx = 0;
-	while (idx < n)
-		*(char *)(s + idx++) = (char)0;
+int	ft_isupper(int c)
+{
+	return ('A' <= c && c <= 'Z');
+}
+
+int	ft_islower(int c)
+{
+	return ('a' <= c && c <= 'z');
 }

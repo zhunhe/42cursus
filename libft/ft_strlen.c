@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/27 10:50:17 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/27 18:02:31 by juhur            ###   ########.fr       */
+/*   Created: 2021/04/25 00:46:00 by juhur             #+#    #+#             */
+/*   Updated: 2021/04/28 11:56:38 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 /*
-** isdigit -- decimal-digit character test (ctype.h)
+** strlen -- find length of string (string.h)
 */
 
-int	ft_isdigit(int c)
+size_t	ft_strlen(char *s)
 {
-	return ('0' <= c && c <= '9');
+	size_t len;
+
+	len = 0;
+	while (*(s++))
+		++len;
+	return (len);
 }
