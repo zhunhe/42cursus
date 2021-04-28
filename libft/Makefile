@@ -6,7 +6,7 @@
 #    By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/25 01:09:30 by juhur             #+#    #+#              #
-#    Updated: 2021/04/28 12:34:37 by juhur            ###   ########.fr        #
+#    Updated: 2021/04/28 19:00:16 by juhur            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,10 @@ SRC =				\
 	./ft_isalnum.c	\
 	./ft_isprint.c	\
 	./ft_toupper.c	\
-	./ft_tolower.c
+	./ft_tolower.c	\
+	./ft_atoi.c		\
+	./ft_strstr.c	\
+	./ft_strcmp.c	\
 
 OBJ = $(SRC:.c=.o)
 
