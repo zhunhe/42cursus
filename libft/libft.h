@@ -6,7 +6,7 @@
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/25 00:46:25 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/28 18:34:25 by juhur            ###   ########.fr       */
+/*   Updated: 2021/04/29 10:37:12 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,10 @@
 
 # include <stddef.h>
 # include <stdlib.h>
+# include <limits.h>
+
+# define ll		long long
+# define uc		unsigned char
 
 typedef struct		s_list
 {
@@ -29,7 +33,6 @@ typedef struct		s_list
 void				*ft_memset(void *b, int c, size_t len);
 size_t				ft_strlen(char *s);
 void				ft_bzero(void *s, size_t n);
-void				*memcpy(void *dst, const void *src, size_t n);
 char				*ft_strstr(const char *haystack, const char *needle);
 int					ft_strcmp(const char *s1, const char *s2);
 /*
