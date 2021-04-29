@@ -6,7 +6,7 @@
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/28 12:58:49 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/29 08:53:02 by juhur            ###   ########.fr       */
+/*   Updated: 2021/04/29 14:55:35 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 
 int	ft_atoi(const char *str)
 {
-	ll	value;
-	int	sign;
+	long long	value;
+	int			sign;
 
 	value = 0;
 	sign = 1;
