@@ -6,7 +6,7 @@
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/28 15:31:58 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/28 18:59:14 by juhur            ###   ########.fr       */
+/*   Updated: 2021/04/29 10:14:54 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,70 +16,27 @@
 ** strstr -- locate a substring in a string (string.h)
 */
 
-int		*get_pi(const char *s, int len)
+int		compare(const char *s1, const char *s2)
 {
-	int	i;
-	int	j;
-	int	*pi;
-
-	pi = (int *)malloc(sizeof(int) * len);
-	i = 0;
-	j = 0;
-	while (++i < len)
+	while (*s2)
 	{
-		while (j > 0 && s[i] != s[j])
-			j = pi[j - 1];
-		if (s[i] == s[j])
-			pi[i] = ++j;
+		if (*s1 != *s2)
+			return (0);
+		++s1;
+		++s2;
 	}
-	return (pi);
+	return (*s2 == '\0');
 }
 
-char	*kmp(const char *src, const char *to_find, int src_len, int to_find_len)
+char	*ft_strstr(const char *haystack, const char *needle)
 {
-	int	i;
-	int	j;
-	int *pi;
-
-	pi = get_pi(to_find, to_find_len);
-	i = -1;
-	j = 0;
-	while (++i < src_len)
+	if (!*needle)
+		return ((char *)haystack);
+	while (*haystack)
 	{
-		if (*(src + i) == *(to_find + j))
-		{
-			if (++j == to_find_len)
-			{
-				free(pi);
-				return (char *)(src + i - j + 1);
-			}
-		}
-		else if (j > 0)
-		{
-			j = pi[j];
-			--i;
-		}
+		if (*haystack == *needle && compare(haystack, needle))
+			return ((char *)haystack);
+		++haystack;
 	}
-	free(pi);
-	return (0);
-}
-
-char	*ft_strstr(const char *src, const char *to_find)
-{
-	int	src_len;
-	int to_find_len;
-
-	if (!to_find)
-		return ((char *)src);
-	if (!src)
-		return (0);
-	src_len = 0;
-	to_find_len = 0;
-	while (src[src_len])
-		++src_len;
-	while (to_find[to_find_len])
-		++to_find_len;
-	if (to_find_len > src_len)
-		return (0);
-	return (kmp(src, to_find, src_len, to_find_len));
+	return (NULL);
 }
