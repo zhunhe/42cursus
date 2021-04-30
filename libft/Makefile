@@ -6,7 +6,7 @@
 #    By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/25 01:09:30 by juhur             #+#    #+#              #
-#    Updated: 2021/04/30 13:41:31 by juhur            ###   ########.fr        #
+#    Updated: 2021/04/30 14:26:48 by juhur            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,7 @@ SRC =				\
 	./ft_memccpy.c	\
 	./ft_memcmp.c	\
 	./ft_strchr.c	\
+	./ft_strlcpy.c	\
 
 OBJ = $(SRC:.c=.o)
 
