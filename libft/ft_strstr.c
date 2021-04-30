@@ -6,7 +6,7 @@
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/28 15:31:58 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/29 10:14:54 by juhur            ###   ########.fr       */
+/*   Updated: 2021/04/30 12:59:18 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,5 @@ char	*ft_strstr(const char *haystack, const char *needle)
 			return ((char *)haystack);
 		++haystack;
 	}
-	return (NULL);
+	return (0);
 }

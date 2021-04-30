@@ -6,7 +6,7 @@
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/29 14:08:22 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/29 14:57:26 by juhur            ###   ########.fr       */
+/*   Updated: 2021/04/30 12:58:29 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	size_t idx;
 
 	if (!dst && !src)
-		return (NULL);
+		return (0);
 	if (!n || !*(unsigned char *)src)
 		return (dst);
 	idx = 0;
