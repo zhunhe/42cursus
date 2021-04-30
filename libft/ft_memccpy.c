@@ -6,7 +6,7 @@
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/29 15:04:34 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/29 15:11:39 by juhur            ###   ########.fr       */
+/*   Updated: 2021/04/30 12:57:59 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	size_t idx;
 
 	if (!dst && !src)
-		return (NULL);
+		return (0);
 	if (!n || !*(unsigned char *)src)
-		return (dst);
+		return (0);
 	idx = 0;
 	while (idx < n)
 	{
