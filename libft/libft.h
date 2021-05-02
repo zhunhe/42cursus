@@ -6,7 +6,7 @@
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/25 00:46:25 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/30 14:26:31 by juhur            ###   ########.fr       */
+/*   Updated: 2021/05/02 10:35:36 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 char				*ft_strchr(const char *s, int c);
 size_t				ft_strlcpy(char *dst, const char *src, size_t dstsize);
+size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
+int					ft_strncmp(const char *s1, const char *s2, size_t n);
 
 /*
 ** #include <ctype.h>
