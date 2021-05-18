@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/03 13:55:38 by juhur             #+#    #+#             */
-/*   Updated: 2021/05/10 18:11:04 by juhur            ###   ########.fr       */
+/*   Created: 2021/05/05 20:40:50 by juhur             #+#    #+#             */
+/*   Updated: 2021/05/18 00:03:12 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** memccpy -- copy string until character found <string.h>
+** Allocates (with malloc(3)) and returns a new element.
+** The variable ’content’ is initialized with the value
+** of the parameter ’content’. The variable ’next’ is initialized to NULL.
 */
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+t_list	*ft_lstnew(void *content)
 {
-	if (!dst && !src)
+	t_list	*new_lst;
+
+	if (!(new_lst = (t_list *)malloc(sizeof(t_list))))
 		return (0);
-	while (n-- > 0)
-	{
-		*(unsigned char *)dst = *(unsigned char *)src;
-		if (*(unsigned char *)src == (unsigned char)c)
-			return (++dst);
-		++dst;
-		++src;
-	}
-	return (0);
+	new_lst->content = content;
+	new_lst->next = 0;
+	return (new_lst);
 }

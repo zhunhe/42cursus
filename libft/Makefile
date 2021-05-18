@@ -5,56 +5,59 @@
 #                                                     +:+ +:+         +:+      #
 #    By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/04/25 01:09:30 by juhur             #+#    #+#              #
-#    Updated: 2021/05/02 10:35:48 by juhur            ###   ########.fr        #
+#    Created: 2021/05/03 12:24:33 by juhur             #+#    #+#              #
+#    Updated: 2021/05/18 07:02:11 by juhur            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-TARGET = libft.a
+NAME = libft.a
 
 CC = gcc
-
 CFLAGS = -Wall -Wextra -Werror
 
-SRC =				\
-	./ft_strlen.c	\
-	./ft_memset.c	\
-	./ft_bzero.c	\
-	./ft_isascii.c	\
-	./ft_isdigit.c	\
-	./ft_isalpha.c	\
-	./ft_isalnum.c	\
-	./ft_isprint.c	\
-	./ft_toupper.c	\
-	./ft_tolower.c	\
-	./ft_atoi.c		\
-	./ft_strstr.c	\
-	./ft_strcmp.c	\
-	./ft_memcpy.c	\
-	./ft_memccpy.c	\
-	./ft_memcmp.c	\
-	./ft_strchr.c	\
-	./ft_strlcpy.c	\
-	./ft_strlcat.c	\
-	./ft_strncmp.c	\
+SRCS = \
+	./ft_atoi.c			./ft_bzero.c		./ft_calloc.c	\
+	./ft_isalnum.c		./ft_isalpha.c		./ft_isascii.c	\
+	./ft_isdigit.c		./ft_isprint.c		./ft_itoa.c		\
+	./ft_memccpy.c		./ft_memchr.c		./ft_memcmp.c	\
+	./ft_memcpy.c		./ft_memmove.c		./ft_memset.c	\
+	./ft_putchar_fd.c	./ft_putendl_fd.c	./ft_putnbr_fd.c\
+	./ft_putstr_fd.c	./ft_split.c		./ft_strchr.c	\
+	./ft_strdup.c		./ft_strjoin.c		./ft_strlcat.c	\
+	./ft_strlcpy.c		./ft_strlen.c		./ft_strmapi.c	\
+	./ft_strncmp.c		./ft_strnstr.c		./ft_strrchr.c	\
+	./ft_strtrim.c		./ft_substr.c		./ft_tolower.c	\
+	./ft_toupper.c
 
-OBJ = $(SRC:.c=.o)
+OBJS = $(SRCS:.c=.o)
+
+BONUS_SRCS = \
+	./ft_lstadd_back.c	./ft_lstadd_front.c	./ft_lstclear.c	\
+	./ft_lstdelone.c	./ft_lstiter.c		./ft_lstlast.c	\
+	./ft_lstmap.c		./ft_lstnew.c		./ft_lstsize.c	\
+
+BONUS_OBJS = $(BONUS_SRCS:.c=.o)
+
+.PHONY: all
+all : $(NAME)
+
+.PHONY: bonus
+bonus : $(BONUS_OBJS)
+	$(AR) $(ARFLAGS) $(NAME) $^
+
+.PHONY: clean
+clean :
+	rm -rf $(OBJS) $(BONUS_OBJS)
+
+.PHONY: fclean
+fclean : clean
+	rm -rf $(NAME)
+
+.PHONY: re
+re : fclean all
 
 AR = ar
-
 ARFLAGS = rcs
 
-$(TARGET): $(OBJ)
-	$(AR) $(ARFLAGS) $(TARGET) $(OBJ)
-
-all: $(TARGET)
-
-clean:
-	rm -f $(OBJ)
-
-fclean: clean
-	rm -f $(TARGET)
-
-re: fclean all
-
-.PHONY: all clean fclean re
+$(NAME) : $(OBJS)
+	$(AR) $(ARFLAGS) $@ $^

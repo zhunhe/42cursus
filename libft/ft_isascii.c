@@ -5,15 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/27 11:21:19 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/29 10:27:02 by juhur            ###   ########.fr       */
+/*   Created: 2021/05/03 14:13:28 by juhur             #+#    #+#             */
+/*   Updated: 2021/05/03 14:23:49 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** isascii -- test for ASCII character (ctype.h)
+** isascii -- test for ASCII character <ctype.h>
 **
 **     0 nul    1 soh    2 stx    3 etx    4 eot    5 enq    6 ack    7 bel
 **     8 bs     9 ht    10 nl    11 vt    12 np    13 cr    14 so    15 si

@@ -1,42 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/28 15:31:58 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/30 12:59:18 by juhur            ###   ########.fr       */
+/*   Created: 2021/05/05 21:20:46 by juhur             #+#    #+#             */
+/*   Updated: 2021/05/17 23:59:44 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** strstr -- locate a substring in a string (string.h)
+** Takes as a parameter an element and frees the memory of the element’s content
+** using the function ’del’ given as a parameter and free the element.
+** The memory of ’next’ must not be freed.
 */
 
-int		compare(const char *s1, const char *s2)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	while (*s2)
-	{
-		if (*s1 != *s2)
-			return (0);
-		++s1;
-		++s2;
-	}
-	return (*s2 == '\0');
-}
-
-char	*ft_strstr(const char *haystack, const char *needle)
-{
-	if (!*needle)
-		return ((char *)haystack);
-	while (*haystack)
-	{
-		if (*haystack == *needle && compare(haystack, needle))
-			return ((char *)haystack);
-		++haystack;
-	}
-	return (0);
+	if (!lst)
+		return ;
+	del(lst->content);
+	free(lst);
 }

@@ -5,33 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/29 14:08:22 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/30 12:58:29 by juhur            ###   ########.fr       */
+/*   Created: 2021/05/03 12:43:13 by juhur             #+#    #+#             */
+/*   Updated: 2021/05/17 19:00:33 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** memcpy -- copy memory area (string.h)
+** memcpy -- copy memory area <string.h>
 */
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t idx;
+	void *ptr;
 
-	if (!dst && !src)
-		return (0);
-	if (!n || !*(unsigned char *)src)
+	if (dst == src)
 		return (dst);
-	idx = 0;
-	while (idx < n)
-	{
-		if (*(unsigned char *)(src + idx))
-			*(unsigned char *)(dst + idx) = *(unsigned char *)(src + idx);
-		else
-			*(unsigned char *)(dst + idx) = 0;
-		++idx;
-	}
+	ptr = dst;
+	while (n--)
+		*(unsigned char *)(ptr++) = *(unsigned char *)(src++);
 	return (dst);
 }

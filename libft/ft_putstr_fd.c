@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/03 13:55:38 by juhur             #+#    #+#             */
-/*   Updated: 2021/05/10 18:11:04 by juhur            ###   ########.fr       */
+/*   Created: 2021/05/05 17:32:57 by juhur             #+#    #+#             */
+/*   Updated: 2021/05/18 00:06:50 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** memccpy -- copy string until character found <string.h>
+** Outputs the string ’s’ to the given file descriptor.
 */
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+void	ft_putstr_fd(char *s, int fd)
 {
-	if (!dst && !src)
-		return (0);
-	while (n-- > 0)
-	{
-		*(unsigned char *)dst = *(unsigned char *)src;
-		if (*(unsigned char *)src == (unsigned char)c)
-			return (++dst);
-		++dst;
-		++src;
-	}
-	return (0);
+	if ((fd < STDIN_FILENO && fd > OPEN_MAX)
+	|| (!s))
+		return ;
+	write(fd, s, ft_strlen(s));
 }

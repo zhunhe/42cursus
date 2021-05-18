@@ -1,32 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/03 13:55:38 by juhur             #+#    #+#             */
-/*   Updated: 2021/05/10 18:11:04 by juhur            ###   ########.fr       */
+/*   Created: 2021/05/04 11:20:50 by juhur             #+#    #+#             */
+/*   Updated: 2021/05/17 19:01:34 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** memccpy -- copy string until character found <string.h>
+** memmove -- copy byte string <string.h>
 */
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	if (!dst && !src)
-		return (0);
-	while (n-- > 0)
+	unsigned char		*d;
+	const unsigned char	*s;
+
+	if (dst == src)
+		return (dst);
+	if (dst < src)
 	{
-		*(unsigned char *)dst = *(unsigned char *)src;
-		if (*(unsigned char *)src == (unsigned char)c)
-			return (++dst);
-		++dst;
-		++src;
+		d = dst;
+		s = src;
+		while (len--)
+			*d++ = *s++;
 	}
-	return (0);
+	else
+	{
+		d = dst + len - 1;
+		s = src + len - 1;
+		while (len--)
+			*d-- = *s--;
+	}
+	return (dst);
 }

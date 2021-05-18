@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/03 13:55:38 by juhur             #+#    #+#             */
-/*   Updated: 2021/05/10 18:11:04 by juhur            ###   ########.fr       */
+/*   Created: 2021/05/03 14:29:04 by juhur             #+#    #+#             */
+/*   Updated: 2021/05/17 19:47:11 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** memccpy -- copy string until character found <string.h>
+** strdup -- save a copy of a string <string.h>
 */
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+char	*ft_strdup(const char *s1)
 {
-	if (!dst && !src)
+	char	*ret;
+	char	*p;
+	size_t	s1_len;
+
+	s1_len = ft_strlen((char *)s1);
+	if (!(ret = (char *)malloc(sizeof(char) * (s1_len + 1))))
 		return (0);
-	while (n-- > 0)
-	{
-		*(unsigned char *)dst = *(unsigned char *)src;
-		if (*(unsigned char *)src == (unsigned char)c)
-			return (++dst);
-		++dst;
-		++src;
-	}
-	return (0);
+	p = ret;
+	while (s1_len--)
+		*(p++) = *(s1++);
+	*p = 0;
+	return (ret);
 }

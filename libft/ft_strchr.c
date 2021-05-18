@@ -5,15 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/30 13:37:42 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/30 13:48:03 by juhur            ###   ########.fr       */
+/*   Created: 2021/05/03 14:15:10 by juhur             #+#    #+#             */
+/*   Updated: 2021/05/03 14:24:51 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** strchr -- locate character in string (string.h)
+** strchr -- locate character in string <string.h>
 */
 
 char	*ft_strchr(const char *s, int c)

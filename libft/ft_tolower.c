@@ -5,15 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/27 17:16:13 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/28 11:56:43 by juhur            ###   ########.fr       */
+/*   Created: 2021/05/03 14:14:32 by juhur             #+#    #+#             */
+/*   Updated: 2021/05/16 16:18:43 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** tolower -- upper case to lower case letter conversion (ctype.h)
+** tolower -- upper case to lower case letter conversion <ctype.h>
 */
 
 int	ft_tolower(int c)

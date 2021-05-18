@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/03 13:55:38 by juhur             #+#    #+#             */
-/*   Updated: 2021/05/10 18:11:04 by juhur            ###   ########.fr       */
+/*   Created: 2021/05/05 21:14:08 by juhur             #+#    #+#             */
+/*   Updated: 2021/05/17 23:57:06 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** memccpy -- copy string until character found <string.h>
+** Adds the element ’new’ at the end of the list.
 */
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	if (!dst && !src)
-		return (0);
-	while (n-- > 0)
+	t_list *last;
+
+	if (!lst || !new)
+		return ;
+	if (!*lst)
 	{
-		*(unsigned char *)dst = *(unsigned char *)src;
-		if (*(unsigned char *)src == (unsigned char)c)
-			return (++dst);
-		++dst;
-		++src;
+		*lst = new;
+		return ;
 	}
-	return (0);
+	last = ft_lstlast(*lst);
+	last->next = new;
 }

@@ -5,15 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/27 12:13:02 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/28 11:55:36 by juhur            ###   ########.fr       */
+/*   Created: 2021/05/03 14:12:07 by juhur             #+#    #+#             */
+/*   Updated: 2021/05/03 14:12:18 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** isalnum -- alphanumeric character test (ctype.h)
+** isalnum -- alphanumeric character test <ctype.h>
 */
 
 int	ft_isalnum(int c)

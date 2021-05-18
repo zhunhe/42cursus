@@ -5,15 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/27 12:36:59 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/28 11:56:19 by juhur            ###   ########.fr       */
+/*   Created: 2021/05/03 14:13:48 by juhur             #+#    #+#             */
+/*   Updated: 2021/05/03 14:24:11 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** isprint -- printing character test (ctype.h)
+** isprint -- printing character test <ctype.h>
 **
 **   040 sp        041 ``!''     042 ``"''     043 ``#''     044 ``$''
 **   045 ``%''     046 ``&''     047 ``'''     050 ``(''     051 ``)''

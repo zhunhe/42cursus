@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/03 13:55:38 by juhur             #+#    #+#             */
-/*   Updated: 2021/05/10 18:11:04 by juhur            ###   ########.fr       */
+/*   Created: 2021/05/05 21:28:12 by juhur             #+#    #+#             */
+/*   Updated: 2021/05/18 00:00:30 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** memccpy -- copy string until character found <string.h>
+** Iterates the list ’lst’ and applies the function ’f’
+** to the content of each element.
 */
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (!dst && !src)
-		return (0);
-	while (n-- > 0)
+	if (!lst || !f)
+		return ;
+	while (lst)
 	{
-		*(unsigned char *)dst = *(unsigned char *)src;
-		if (*(unsigned char *)src == (unsigned char)c)
-			return (++dst);
-		++dst;
-		++src;
+		f(lst->content);
+		lst = lst->next;
 	}
-	return (0);
 }

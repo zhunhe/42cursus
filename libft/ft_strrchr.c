@@ -1,32 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/03 13:55:38 by juhur             #+#    #+#             */
-/*   Updated: 2021/05/10 18:11:04 by juhur            ###   ########.fr       */
+/*   Created: 2021/05/03 16:40:02 by juhur             #+#    #+#             */
+/*   Updated: 2021/05/03 17:41:13 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** memccpy -- copy string until character found <string.h>
+** strrchr -- locate character in string <string.h>
 */
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+char	*ft_strrchr(const char *s, int c)
 {
-	if (!dst && !src)
+	size_t	s_len;
+
+	s_len = ft_strlen((char *)s);
+	if (!c)
+		return ((char *)(s + s_len));
+	if (!s_len)
 		return (0);
-	while (n-- > 0)
+	while (s_len >= 0)
 	{
-		*(unsigned char *)dst = *(unsigned char *)src;
-		if (*(unsigned char *)src == (unsigned char)c)
-			return (++dst);
-		++dst;
-		++src;
+		if (*(char *)(s + s_len) == (char)c)
+			return ((char *)(s + s_len));
+		if (!s_len)
+			break ;
+		--s_len;
 	}
 	return (0);
 }

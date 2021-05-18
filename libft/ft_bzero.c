@@ -5,15 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/27 10:17:27 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/28 12:55:36 by juhur            ###   ########.fr       */
+/*   Created: 2021/05/03 12:23:29 by juhur             #+#    #+#             */
+/*   Updated: 2021/05/03 12:44:43 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** bzero -- write zeroes to a byte string (string.h)
+** bzero -- write zeroes to a byte string <string.h>
 */
 
 void	ft_bzero(void *s, size_t n)

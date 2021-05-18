@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/03 13:55:38 by juhur             #+#    #+#             */
-/*   Updated: 2021/05/10 18:11:04 by juhur            ###   ########.fr       */
+/*   Created: 2021/05/05 21:03:23 by juhur             #+#    #+#             */
+/*   Updated: 2021/05/18 00:03:37 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** memccpy -- copy string until character found <string.h>
+** Counts the number of elements in a list.
 */
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+int	ft_lstsize(t_list *lst)
 {
-	if (!dst && !src)
-		return (0);
-	while (n-- > 0)
+	int		len;
+
+	len = 0;
+	while (lst)
 	{
-		*(unsigned char *)dst = *(unsigned char *)src;
-		if (*(unsigned char *)src == (unsigned char)c)
-			return (++dst);
-		++dst;
-		++src;
+		lst = lst->next;
+		++len;
 	}
-	return (0);
+	return (len);
 }

@@ -5,19 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/28 12:58:49 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/29 14:55:35 by juhur            ###   ########.fr       */
+/*   Created: 2021/05/03 14:11:04 by juhur             #+#    #+#             */
+/*   Updated: 2021/05/17 23:47:07 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** atoi -- convert ASCII string to integer (stdlib.h)
+** atoi -- convert ASCII string to integer <stdlib.h>
 */
 
 int	ft_atoi(const char *str)
 {
+	long long	tmp;
 	long long	value;
 	int			sign;
 
@@ -25,23 +26,27 @@ int	ft_atoi(const char *str)
 	sign = 1;
 	while (ft_isspace(*str))
 		++str;
-	sign = (*str == '-') ? -1 : 1;
 	if (*str == '+' || *str == '-')
-		++str;
+		if (*str++ == '-')
+			sign = -1;
 	while (ft_isdigit(*str))
 	{
-		value = value * 10 + *str - '0';
-		if (value * sign > INT_MAX)
-			return (-1);
-		else if (value * sign < INT_MIN)
-			return (0);
+		tmp = value * 10 + *str - '0';
+		if (tmp < value)
+		{
+			if (sign == 1)
+				return (-1);
+			else
+				return (0);
+		}
+		value = tmp;
 		++str;
 	}
-	return (value * sign);
+	return ((int)value * sign);
 }
 
 /*
-** isspace -- white-space character test (ctype.h)
+** isspace -- white-space character test <ctype.h>
 */
 
 int	ft_isspace(int c)

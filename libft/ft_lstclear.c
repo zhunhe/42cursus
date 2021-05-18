@@ -1,28 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/28 13:33:27 by juhur             #+#    #+#             */
-/*   Updated: 2021/04/29 14:55:58 by juhur            ###   ########.fr       */
+/*   Created: 2021/05/05 21:23:23 by juhur             #+#    #+#             */
+/*   Updated: 2021/05/17 23:58:56 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** strcmp -- compare strings (string.h)
+** Deletes and frees the given element and every successor of that element,
+** using the function ’del’ and free(3).
+** Finally, the pointer to the list must be set to NULL.
 */
 
-int	ft_strcmp(const char *s1, const char *s2)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	while ((*s1 == *s2)
-		&& (*s1 && *s2))
+	t_list	*curr;
+	t_list	*next;
+
+	if (!lst)
+		return ;
+	curr = *lst;
+	while (curr)
 	{
-		++s1;
-		++s2;
+		next = curr->next;
+		ft_lstdelone(curr, del);
+		curr = next;
 	}
-	return ((int)(*(unsigned char *)s1 - *(unsigned char *)s2));
+	*lst = 0;
 }
