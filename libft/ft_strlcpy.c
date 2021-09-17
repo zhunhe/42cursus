@@ -6,7 +6,7 @@
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/03 14:17:31 by juhur             #+#    #+#             */
-/*   Updated: 2021/05/10 18:50:55 by juhur            ###   ########.fr       */
+/*   Updated: 2021/09/17 18:07:02 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	if (!dstsize)
 		return (src_len);
 	while ((*src)
-	&& (dstsize-- > 1))
+		&& (dstsize-- > 1))
 		*(dst++) = *(src++);
 	*dst = 0;
 	return (src_len);

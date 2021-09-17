@@ -6,7 +6,7 @@
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/03 14:38:40 by juhur             #+#    #+#             */
-/*   Updated: 2021/05/09 17:20:39 by juhur            ###   ########.fr       */
+/*   Updated: 2021/09/17 18:11:33 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ void	*ft_calloc(size_t count, size_t size)
 		size = 1;
 	}
 	calloc_size = size * count;
-	if (!(ret = malloc(calloc_size)))
+	ret = malloc(calloc_size);
+	if (!ret)
 		return (0);
 	p = ret;
 	while (calloc_size-- > 0)

@@ -6,7 +6,7 @@
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 15:29:12 by juhur             #+#    #+#             */
-/*   Updated: 2021/05/18 00:12:05 by juhur            ###   ########.fr       */
+/*   Updated: 2021/09/17 18:05:29 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static size_t	get_alloc_len(size_t s_len, size_t start, size_t len)
 {
-	size_t alloc_len;
+	size_t	alloc_len;
 
 	if (s_len < start)
 		alloc_len = 1;
@@ -30,7 +30,7 @@ static size_t	get_alloc_len(size_t s_len, size_t start, size_t len)
 ** The substring begins at index ’start’ and is of maximum size ’len’.
 */
 
-char			*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*ret;
 	char	*ptr;
@@ -41,7 +41,8 @@ char			*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	s_len = ft_strlen((char *)s);
 	alloc_len = get_alloc_len(s_len, start, len);
-	if (!(ret = (char *)malloc(sizeof(char) * alloc_len)))
+	ret = (char *)malloc(sizeof(char) * alloc_len);
+	if (!ret)
 		return (NULL);
 	if (alloc_len == 1)
 	{

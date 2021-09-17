@@ -6,7 +6,7 @@
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 16:30:10 by juhur             #+#    #+#             */
-/*   Updated: 2021/05/18 00:08:35 by juhur            ###   ########.fr       */
+/*   Updated: 2021/09/17 18:07:22 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (0);
 	s1_len = ft_strlen((char *)s1);
 	s2_len = ft_strlen((char *)s2);
-	if (!(ret = (char *)malloc(s1_len + s2_len + 1)))
+	ret = (char *)malloc(s1_len + s2_len + 1);
+	if (!ret)
 		return (0);
 	p = ret;
 	while (s1_len-- > 0)

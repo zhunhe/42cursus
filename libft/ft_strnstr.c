@@ -6,7 +6,7 @@
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/03 15:48:39 by juhur             #+#    #+#             */
-/*   Updated: 2021/05/13 17:36:44 by juhur            ###   ########.fr       */
+/*   Updated: 2021/09/17 18:06:10 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
-	size_t to_find_len;
+	size_t	to_find_len;
 
 	if (!*to_find)
 		return ((char *)str);

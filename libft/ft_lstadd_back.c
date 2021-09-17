@@ -6,7 +6,7 @@
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 21:14:08 by juhur             #+#    #+#             */
-/*   Updated: 2021/05/17 23:57:06 by juhur            ###   ########.fr       */
+/*   Updated: 2021/09/17 18:11:05 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list *last;
+	t_list	*last;
 
 	if (!lst || !new)
 		return ;

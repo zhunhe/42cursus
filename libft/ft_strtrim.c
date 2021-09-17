@@ -6,7 +6,7 @@
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 16:49:21 by juhur             #+#    #+#             */
-/*   Updated: 2021/05/18 00:13:39 by juhur            ###   ########.fr       */
+/*   Updated: 2021/09/17 18:06:00 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static int	get_index_data(char const *s1, char const *set, size_t *start,
 ** specified in ’set’ removed from the beginning and the end of the string.
 */
 
-char		*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*ret;
 	size_t	start;
@@ -45,7 +45,8 @@ char		*ft_strtrim(char const *s1, char const *set)
 		return (0);
 	if (!ft_strlen((char *)s1) || !get_index_data(s1, set, &start, &end))
 		return (ft_strdup(""));
-	if (!(ret = (char *)malloc(sizeof(char) * (end - start + 2))))
+	ret = (char *)malloc(sizeof(char) * (end - start + 2));
+	if (!ret)
 		return (0);
 	ft_memcpy(ret, s1 + start, end - start + 1);
 	*(ret + end - start + 1) = 0;

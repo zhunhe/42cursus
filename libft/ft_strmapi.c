@@ -6,7 +6,7 @@
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 16:43:55 by juhur             #+#    #+#             */
-/*   Updated: 2021/05/18 00:09:57 by juhur            ###   ########.fr       */
+/*   Updated: 2021/09/17 18:06:41 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (!s || !f)
 		return (0);
 	len = ft_strlen((char *)s);
-	if (!(ret = (char *)malloc(sizeof(char) * (len + 1))))
+	ret = (char *)malloc(sizeof(char) * (len + 1));
+	if (!ret)
 		return (0);
 	idx = 0;
 	while (idx < len)

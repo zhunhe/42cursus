@@ -6,7 +6,7 @@
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/03 12:13:10 by juhur             #+#    #+#             */
-/*   Updated: 2021/05/10 18:07:02 by juhur            ###   ########.fr       */
+/*   Updated: 2021/09/17 18:09:30 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	void *p;
+	void	*p;
 
 	p = b;
 	while (len-- > 0)

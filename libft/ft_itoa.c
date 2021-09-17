@@ -6,7 +6,7 @@
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 12:17:20 by juhur             #+#    #+#             */
-/*   Updated: 2021/05/17 23:54:18 by juhur            ###   ########.fr       */
+/*   Updated: 2021/09/17 18:12:14 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static size_t	get_len(int n)
 	return (len);
 }
 
-char			*ft_itoa_main(char *ret, int n, size_t len)
+char	*ft_itoa_main(char *ret, int n, size_t len)
 {
 	long long	n_tmp;
 
@@ -67,13 +67,14 @@ char			*ft_itoa_main(char *ret, int n, size_t len)
 ** Negative numbers must be handled.
 */
 
-char			*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char		*ret;
 	size_t		len;
 
 	len = get_len(n);
-	if (!(ret = (char *)malloc(sizeof(char) * (len + 1))))
+	ret = (char *)malloc(sizeof(char) * (len + 1));
+	if (!ret)
 		return (0);
 	return (ft_itoa_main(ret, n, len));
 }

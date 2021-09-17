@@ -6,7 +6,7 @@
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 21:38:01 by juhur             #+#    #+#             */
-/*   Updated: 2021/05/18 00:02:12 by juhur            ###   ########.fr       */
+/*   Updated: 2021/09/17 18:10:39 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	ret = 0;
 	while (lst)
 	{
-		if (!(temp = ft_lstnew((*f)(lst->content))))
+		temp = ft_lstnew((*f)(lst->content));
+		if (!temp)
 		{
 			ft_lstclear(&ret, del);
 			return (0);

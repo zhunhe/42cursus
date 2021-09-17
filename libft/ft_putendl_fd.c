@@ -6,7 +6,7 @@
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 17:35:46 by juhur             #+#    #+#             */
-/*   Updated: 2021/05/18 00:05:15 by juhur            ###   ########.fr       */
+/*   Updated: 2021/09/17 18:09:22 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 void	ft_putendl_fd(char *s, int fd)
 {
 	if ((fd < STDIN_FILENO && fd > OPEN_MAX)
-	|| (!s))
+		|| (!s))
 		return ;
 	ft_putstr_fd(s, fd);
 	ft_putchar_fd('\n', fd);

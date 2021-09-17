@@ -6,7 +6,7 @@
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 17:38:23 by juhur             #+#    #+#             */
-/*   Updated: 2021/05/18 00:06:19 by juhur            ###   ########.fr       */
+/*   Updated: 2021/09/17 18:09:13 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static void	ft_putnbr_fd_main(long long n, int fd)
 ** Outputs the integer ’n’ to the given file descriptor.
 */
 
-void		ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	if (fd < STDIN_FILENO && fd > OPEN_MAX)
 		return ;

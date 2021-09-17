@@ -6,7 +6,7 @@
 /*   By: juhur <juhur@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 12:52:28 by juhur             #+#    #+#             */
-/*   Updated: 2021/05/18 00:07:48 by juhur            ###   ########.fr       */
+/*   Updated: 2021/09/17 18:08:53 by juhur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static size_t	get_word_cnt(char const *s, char c)
 	while (s[idx])
 	{
 		if ((!idx || s[idx - 1] == c)
-		&& s[idx] != c)
+			&& s[idx] != c)
 			++w_cnt;
 		++idx;
 	}
@@ -39,7 +39,7 @@ static size_t	get_word_len(char const *s, char c)
 	return (w_len);
 }
 
-static void		ft_split_free(char **ret, size_t idx)
+static void	ft_split_free(char **ret, size_t idx)
 {
 	while (idx >= 0)
 	{
@@ -51,7 +51,7 @@ static void		ft_split_free(char **ret, size_t idx)
 	free(ret);
 }
 
-static char		**ft_split_main(char const *s, char c, char **ret, size_t w_cnt)
+static char	**ft_split_main(char const *s, char c, char **ret, size_t w_cnt)
 {
 	size_t	idx;
 	size_t	jdx;
@@ -63,7 +63,8 @@ static char		**ft_split_main(char const *s, char c, char **ret, size_t w_cnt)
 		while ((*s) && *s == c)
 			++s;
 		w_len = get_word_len(s, c);
-		if (!(ret[idx] = (char *)malloc(sizeof(char) * (w_len + 1))))
+		ret[idx] = (char *)malloc(sizeof(char) * (w_len + 1));
+		if (!ret[idx])
 		{
 			ft_split_free(ret, idx);
 			return (0);
@@ -84,7 +85,7 @@ static char		**ft_split_main(char const *s, char c, char **ret, size_t w_cnt)
 ** The array must be ended by a NULL pointer.
 */
 
-char			**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	size_t	w_cnt;
 	char	**ret;
@@ -92,7 +93,8 @@ char			**ft_split(char const *s, char c)
 	if (!s)
 		return (0);
 	w_cnt = get_word_cnt(s, c);
-	if (!(ret = (char **)malloc(sizeof(char *) * (w_cnt + 1))))
+	ret = (char **)malloc(sizeof(char *) * (w_cnt + 1));
+	if (!ret)
 		return (0);
 	return (ft_split_main(s, c, ret, w_cnt));
 }
