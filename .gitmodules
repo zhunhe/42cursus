@@ -14,3 +14,7 @@
 	path = [02] minitalk
 	url = https://github.com/zhunhe/minitalk.git
 	branch = master
+[submodule "push_swap"]
+	path = [02] push_swap
+	url = https://github.com/zhunhe/push_swap.git
+	branch = master
