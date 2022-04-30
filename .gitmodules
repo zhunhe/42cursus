@@ -10,3 +10,7 @@
 	path = [02] so_long
 	url = https://github.com/zhunhe/so_long.git
 	branch = main
+[submodule "minitalk"]
+	path = [02] minitalk
+	url = https://github.com/zhunhe/minitalk.git
+	branch = master
