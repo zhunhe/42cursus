@@ -6,3 +6,7 @@
 	path = [01] ft_printf
 	url = https://github.com/zhunhe/ft_printf.git
 	branch = master
+[submodule "so_long"]
+	path = [02] so_long
+	url = https://github.com/zhunhe/so_long.git
+	branch = main
