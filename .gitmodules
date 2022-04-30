@@ -1,4 +1,4 @@
 [submodule "get_next_line"]
-	path = get_next_line
+	path = [01] get_next_line
 	url = https://github.com/zhunhe/get_next_line.git
 	branch = main
