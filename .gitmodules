@@ -22,3 +22,7 @@
 	path = [03] Philosophers
 	url = https://github.com/zhunhe/Philosophers.git
 	branch = master
+[submodule "minishell"]
+	path = [03] minishell
+	url = https://github.com/zhunhe/minishell.git
+	branch = master
