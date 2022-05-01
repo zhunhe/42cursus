@@ -18,3 +18,7 @@
 	path = [02] push_swap
 	url = https://github.com/zhunhe/push_swap.git
 	branch = master
+[submodule "Philosophers"]
+	path = [03] Philosophers
+	url = https://github.com/zhunhe/Philosophers.git
+	branch = master
