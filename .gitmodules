@@ -5,7 +5,7 @@
 [submodule "ft_printf"]
 	path = [01] ft_printf
 	url = https://github.com/zhunhe/ft_printf.git
-	branch = master
+	branch = main
 [submodule "so_long"]
 	path = [02] so_long
 	url = https://github.com/zhunhe/so_long.git
@@ -13,16 +13,16 @@
 [submodule "minitalk"]
 	path = [02] minitalk
 	url = https://github.com/zhunhe/minitalk.git
-	branch = master
+	branch = main
 [submodule "push_swap"]
 	path = [02] push_swap
 	url = https://github.com/zhunhe/push_swap.git
-	branch = master
+	branch = main
 [submodule "Philosophers"]
 	path = [03] Philosophers
 	url = https://github.com/zhunhe/Philosophers.git
-	branch = master
+	branch = main
 [submodule "minishell"]
 	path = [03] minishell
 	url = https://github.com/zhunhe/minishell.git
-	branch = master
+	branch = main
