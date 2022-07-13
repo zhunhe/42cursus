@@ -26,3 +26,6 @@
 	path = [03] minishell
 	url = https://github.com/zhunhe/minishell.git
 	branch = main
+[submodule "cub3d"]
+	path = [04] cub3d
+	url = https://github.com/zhunhe/cub3d.git
